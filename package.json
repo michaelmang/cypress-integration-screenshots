@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "cypress": "^6.3.0",
+    "cypress-plugin-snapshots": "^1.4.4",
     "eslint-plugin-cypress": "^2.11.2",
     "faker": "^5.1.0",
     "react": "^17.0.1",

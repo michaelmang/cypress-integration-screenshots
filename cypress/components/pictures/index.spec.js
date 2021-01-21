@@ -3,6 +3,8 @@ import { mount } from '@cypress/react'
 import Pictures from "../../../src/pages/pictures"
 import getPictures from '../../../src/utils/getPictures'
 
+const DEFAULT_SNAPSHOT = { name: "cypress_components_pictures__default_snapshot" }
+
 describe('Pictures', () => {
   it('matches the saved screenshot', () => {
     renderComponent()
@@ -11,7 +13,7 @@ describe('Pictures', () => {
       expect($img[0].naturalWidth).to.be.greaterThan(0)
     })
 
-    cy.screenshot()
+    cy.get("body").toMatchImageSnapshot(DEFAULT_SNAPSHOT)
   })
 
   describe("is loading", () => {
@@ -20,7 +22,7 @@ describe('Pictures', () => {
         isLoading: true,
       })
 
-      cy.screenshot()
+      cy.get("body").toMatchImageSnapshot(DEFAULT_SNAPSHOT)
     })
   })
 

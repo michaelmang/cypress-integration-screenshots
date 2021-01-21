@@ -4,7 +4,7 @@ export default function Pictures({ data, isLoading, onGenerateNewPictures }) {
   return (
     <main>
       <h1>
-        Pictures{' '}
+        Fresh Pictures{' '}
         <span aria-label="camera" role="img">
           📷
         </span>

@@ -2,5 +2,15 @@
   "baseUrl": "http://localhost:3000/",
   "experimentalComponentTesting": true,
   "componentFolder": "cypress/components",
-  "fixturesFolder": false
+  "fixturesFolder": false,
+  "trashAssetsBeforeRuns": true,
+  "ignoreTestFiles": [
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
+  ],
+  "env": {
+    "cypress-plugin-snapshots": {
+      "updateSnapshots": true
+    }
+  }
 }
